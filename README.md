@@ -42,4 +42,4 @@ Image here.
 
 ## Changelog
 
-View [CHANGELOG.MD](https://github.com/deviodigital/cleanblog/blob/master/CHANGELOG.md) file
+View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press-theme/blob/master/CHANGELOG.md) file
