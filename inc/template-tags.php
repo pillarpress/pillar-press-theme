@@ -289,9 +289,9 @@ function ppt_header() {
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1><?php single_post_title(); ?></h1>
-							<?php if ( function_exists( 'the_subtitle' ) ) {
-								the_subtitle( '<h2 class="subheading">', '</h2>' );
-							} ?>
+												<?php if ( function_exists( 'the_subtitle' ) ) {
+													the_subtitle( '<h2 class="subheading">', '</h2>' );
+												} ?>
                         <span class="meta"><?php ppt_posted_on(); ?></span>
                     </div>
                 </div>
@@ -315,17 +315,17 @@ function ppt_header() {
                     <div class="site-heading">
                         <h1><?php single_post_title(); ?></h1>
                         <hr class="small">
-			<?php if ( function_exists( 'the_subtitle' ) ) {
-				the_subtitle( '<span class="subheading">', '</span>' );
-			} ?>
+												<?php if ( function_exists( 'the_subtitle' ) ) {
+													the_subtitle( '<span class="subheading">', '</span>' );
+												} ?>
                     </div>
-					<!-- /.site-heading -->
+										<!-- /.site-heading -->
                 </div>
-				<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
+								<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
             </div>
-			<!-- /.row -->
+						<!-- /.row -->
         </div>
-		<!-- /.container -->
+				<!-- /.container -->
     </header>
 
 	<?php } elseif( is_search() ) { ?>
@@ -341,48 +341,48 @@ function ppt_header() {
                         <hr class="small">
                         <span class="subheading"><?php printf( esc_html__( 'You searched for: "%s"', 'pp-theme' ), '<span>' . get_search_query() . '</span>' ); ?></span>
                     </div>
-		    <!-- /.site-heading -->
+		    						<!-- /.site-heading -->
                 </div>
-		<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
+								<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
             </div>
-	<!-- /.row -->
+						<!-- /.row -->
         </div>
-	<!-- /.container -->
+				<!-- /.container -->
     </header>
 
 	<?php } else { ?>
 
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-	<?php if ( get_theme_mod( 'ppt_homeintro_image' ) !='' ) { ?>
-	<?php $headerimg = get_theme_mod( 'ppt_homeintro_image' ); ?>
-	<?php } else { ?>
-	<?php $headerimg = get_template_directory_uri() . '/img/home-bg.jpg'; ?>
-	<?php } ?>
+	  <!-- Page Header -->
+	  <!-- Set your background image for this header on the line below. -->
+		<?php if ( get_theme_mod( 'ppt_homeintro_image' ) !='' ) { ?>
+		<?php $headerimg = get_theme_mod( 'ppt_homeintro_image' ); ?>
+		<?php } else { ?>
+		<?php $headerimg = get_template_directory_uri() . '/img/home-bg.jpg'; ?>
+		<?php } ?>
     <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $headerimg; ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-			<?php if ( get_theme_mod( 'ppt_homeintro_title' ) !='' ) { ?>
-			<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
-			<?php } else { ?>
+												<?php if ( get_theme_mod( 'ppt_homeintro_title' ) !='' ) { ?>
+												<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
+												<?php } else { ?>
                         <h1><?php esc_html_e( 'Pillar Press', 'pp-theme' ); ?></h1>
-			<?php } ?>
+												<?php } ?>
                         <hr class="small">
-			<?php if (get_theme_mod( 'ppt_homeintro_subtitle' ) !='') { ?>
+												<?php if (get_theme_mod( 'ppt_homeintro_subtitle' ) !='') { ?>
                         <span class="subheading"><?php echo get_theme_mod( 'ppt_homeintro_subtitle' ); ?></span>
-			<?php } else { ?>
+												<?php } else { ?>
                         <span class="subheading"><?php esc_html_e( 'The Cornerstone of Content Creation.', 'pp-theme' ); ?></span>
-			<?php } ?>
+												<?php } ?>
                     </div>
-		    <!-- /.site-heading -->
+		    						<!-- /.site-heading -->
                 </div>
-		<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
+								<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
             </div>
-	    <!-- /.row -->
+						<!-- /.row -->
         </div>
-	<!-- /.container -->
+				<!-- /.container -->
     </header>
 
 	<?php } ?>
