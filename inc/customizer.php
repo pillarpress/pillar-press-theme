@@ -15,7 +15,7 @@ function ppt_register_social_links( $wp_customize ) {
 		'Instagram',
 		'Flickr',
 		'Medium',
-		'Vine',
+		'Snapchat',
 		'Tumblr',
 		'YouTube',
 	);
@@ -63,9 +63,9 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_link_color',
 		array(
-			'default'     		 => '#0085a1',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport'   		 => 'refresh'
+			'default'           => '#0085a1',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -73,9 +73,9 @@ function ppt_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'link_color',
 			array(
-			    'label'      => 'Link Color',
-			    'section'    => 'colors',
-			    'settings'   => 'ppt_link_color'
+			    'label'    => 'Link Color',
+			    'section'  => 'colors',
+			    'settings' => 'ppt_link_color'
 			)
 		)
 	);
@@ -84,9 +84,9 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_header_background_color',
 		array(
-			'default'     		 => '#444',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport'   		 => 'refresh'
+			'default'           => '#444',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -94,9 +94,9 @@ function ppt_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'header_background_color',
 			array(
-			    'label'      => 'Header Background Color',
-			    'section'    => 'colors',
-			    'settings'   => 'ppt_header_background_color'
+			    'label'    => 'Header Background Color',
+			    'section'  => 'colors',
+			    'settings' => 'ppt_header_background_color'
 			)
 		)
 	);
@@ -113,8 +113,8 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'ppt_display_options',
 		array(
-			'title'     => 'Display Options',
-			'priority'  => 40
+			'title'    => 'Display Options',
+			'priority' => 40
 		)
 	);
 
@@ -122,20 +122,20 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_post_excerpt',
 		array(
-			'default'   => 'hide',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'hide',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_post_excerpt',
 		array(
-			'section'  => 'ppt_display_options',
-			'label'    => 'Post Excerpts',
-			'type'     => 'radio',
-			'choices'  => array(
-				'hide'    => 'Hide',
-				'show'   => 'Show'
+			'section' => 'ppt_display_options',
+			'label'   => 'Post Excerpts',
+			'type'    => 'radio',
+			'choices' => array(
+				'hide' => 'Hide',
+				'show' => 'Show'
 			)
 		)
 	);
@@ -144,20 +144,20 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_darken_header',
 		array(
-			'default'   => 'no',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'no',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_darken_header',
 		array(
-			'section'  => 'ppt_display_options',
-			'label'    => 'Darken Header?',
-			'type'     => 'radio',
-			'choices'  => array(
-				'no'    => 'No',
-				'yes'   => 'Yes'
+			'section' => 'ppt_display_options',
+			'label'   => 'Darken Header?',
+			'type'    => 'radio',
+			'choices' => array(
+				'no'  => 'No',
+				'yes' => 'Yes'
 			)
 		)
 	);
@@ -166,20 +166,20 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_parallax_header',
 		array(
-			'default'   => 'no',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport' => 'refresh'
+			'default'           => 'no',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_parallax_header',
 		array(
-			'section'  => 'ppt_display_options',
-			'label'    => 'Parallax Header?',
-			'type'     => 'radio',
-			'choices'  => array(
-				'no'    => 'No',
-				'yes'   => 'Yes'
+			'section' => 'ppt_display_options',
+			'label'   => 'Parallax Header?',
+			'type'    => 'radio',
+			'choices' => array(
+				'no'  => 'No',
+				'yes' => 'Yes'
 			)
 		)
 	);
@@ -188,17 +188,17 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_footer_copyright_text',
 		array(
-			'default'            => '',
-			'sanitize_callback'  => 'ppt_sanitize_copyright',
-			'transport'          => 'refresh'
+			'default'           => '',
+			'sanitize_callback' => 'ppt_sanitize_copyright',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_footer_copyright_text',
 		array(
-			'section'  => 'ppt_display_options',
-			'label'    => 'Copyright Message',
-			'type'     => 'text'
+			'section' => 'ppt_display_options',
+			'label'   => 'Copyright Message',
+			'type'    => 'text'
 		)
 	);
 
@@ -208,8 +208,8 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'ppt_homeintro_options',
 		array(
-			'title'     => 'Home Intro',
-			'priority'  => 20
+			'title'    => 'Home Intro',
+			'priority' => 20
 		)
 	);
 
@@ -217,9 +217,9 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_homeintro_image',
 		array(
-		    'default'     		 => get_template_directory_uri() . '/img/home-bg.jpg',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-		    'transport'   		 => 'refresh'
+		    'default'           => get_template_directory_uri() . '/img/home-bg.jpg',
+				'sanitize_callback' => 'ppt_sanitize_input',
+		    'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
@@ -238,17 +238,17 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_homeintro_title',
 		array(
-			'default'            => '',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport'          => 'refresh'
+			'default'           => '',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_homeintro_title',
 		array(
-			'section'  => 'ppt_homeintro_options',
-			'label'    => 'Title',
-			'type'     => 'text'
+			'section' => 'ppt_homeintro_options',
+			'label'   => 'Title',
+			'type'    => 'text'
 		)
 	);
 
@@ -256,17 +256,17 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_homeintro_subtitle',
 		array(
-			'default'            => '',
-			'sanitize_callback'  => 'ppt_sanitize_input',
-			'transport'          => 'refresh'
+			'default'           => '',
+			'sanitize_callback' => 'ppt_sanitize_input',
+			'transport'         => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		'ppt_homeintro_subtitle',
 		array(
-			'section'  => 'ppt_homeintro_options',
-			'label'    => 'Subtitle',
-			'type'     => 'text'
+			'section' => 'ppt_homeintro_options',
+			'label'   => 'Subtitle',
+			'type'    => 'text'
 		)
 	);
 
@@ -288,66 +288,66 @@ function ppt_sanitize_input( $input ) {
 
 function ppt_sanitize_copyright( $input ) {
 	$allowed = array(
-		's'			=> array(),
-		'br'		=> array(),
-		'em'		=> array(),
-		'i'			=> array(),
-		'strong'	=> array(),
-		'b'			=> array(),
-		'a'			=> array(
-			'href'			=> array(),
-			'title'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		's'      => array(),
+		'br'     => array(),
+		'em'     => array(),
+		'i'      => array(),
+		'strong' => array(),
+		'b'      => array(),
+		'a'      => array(
+			'href'  => array(),
+			'title' => array(),
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'form'		=> array(
-			'id'			=> array(),
-			'class'			=> array(),
-			'action'		=> array(),
-			'method'		=> array(),
-			'autocomplete'	=> array(),
-			'style'			=> array(),
+		'form' => array(
+			'id'           => array(),
+			'class'        => array(),
+			'action'       => array(),
+			'method'       => array(),
+			'autocomplete' => array(),
+			'style'        => array(),
 		),
-		'input'		=> array(
-			'type'			=> array(),
-			'name'			=> array(),
-			'class' 		=> array(),
-			'id'			=> array(),
-			'value'			=> array(),
-			'placeholder'	=> array(),
-			'tabindex'		=> array(),
-			'style'			=> array(),
+		'input' => array(
+			'type'        => array(),
+			'name'        => array(),
+			'class'       => array(),
+			'id'          => array(),
+			'value'       => array(),
+			'placeholder' => array(),
+			'tabindex'    => array(),
+			'style'       => array(),
 		),
-		'img'		=> array(
-			'src'			=> array(),
-			'alt'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
-			'height'		=> array(),
-			'width'			=> array(),
+		'img' => array(
+			'src'    => array(),
+			'alt'    => array(),
+			'class'  => array(),
+			'id'     => array(),
+			'style'  => array(),
+			'height' => array(),
+			'width'  => array(),
 		),
-		'span'		=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'span' => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'p'			=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'p' => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
-		'div'		=> array(
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+		'div' => array(
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
 		'blockquote' => array(
-			'cite'			=> array(),
-			'class'			=> array(),
-			'id'			=> array(),
-			'style'			=> array(),
+			'cite'  => array(),
+			'class' => array(),
+			'id'    => array(),
+			'style' => array(),
 		),
 	);
     return wp_kses( $input, $allowed );
@@ -448,6 +448,7 @@ function ppt_customizer_css() {
 <?php
 } // end ppt_customizer_css
 add_action( 'wp_head', 'ppt_customizer_css' );
+
 /**
  * Registers the Theme Customizer Preview with WordPress.
  *
