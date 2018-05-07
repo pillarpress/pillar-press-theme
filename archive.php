@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
 			<?php do_action('cleanblog_archive_top'); ?>
 
@@ -35,7 +35,7 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-			
+
 				<?php cleanblog_posts_navigation(); ?>
 
 			<?php else : ?>
@@ -43,10 +43,10 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 			<?php endif; ?>
-			
+
 			<?php do_action('cleanblog_archive_bottom'); ?>
 
-			</div>
-			<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
+		</div>
+		<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
 
 <?php get_footer(); ?>
