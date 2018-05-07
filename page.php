@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>

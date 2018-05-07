@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts.
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 ?>

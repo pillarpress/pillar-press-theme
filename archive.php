@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>

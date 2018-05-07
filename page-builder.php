@@ -4,7 +4,7 @@
  *
  * This is the template for times you want to use a page builder.
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>

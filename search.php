@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>

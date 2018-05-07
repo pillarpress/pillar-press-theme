@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>

@@ -2,7 +2,7 @@
 /**
  * Clean Blog functions and definitions
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 if ( ! function_exists( 'ppt_setup' ) ) :

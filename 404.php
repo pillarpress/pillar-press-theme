@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package Clean Blog
+ * @package Pillar Press
  */
 
 get_header(); ?>
