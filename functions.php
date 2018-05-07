@@ -1,6 +1,6 @@
 <?php
 /**
- * Clean Blog functions and definitions
+ * Pillar Press functions and definitions
  *
  * @package Pillar Press
  */
@@ -17,7 +17,7 @@ function ppt_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Clean Blog, use a find and replace
+	 * If you're building a theme based on Pillar Press, use a find and replace
 	 * to change 'pp-theme' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'pp-theme', get_template_directory() . '/languages' );

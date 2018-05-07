@@ -369,13 +369,13 @@ function ppt_header() {
 			<?php if ( get_theme_mod('ppt_homeintro_title') !='' ) { ?>
 			<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
 			<?php } else { ?>
-                        <h1><?php esc_html_e( 'Clean Blog', 'pp-theme' ); ?></h1>
+                        <h1><?php esc_html_e( 'Pillar Press', 'pp-theme' ); ?></h1>
 			<?php } ?>
                         <hr class="small">
 			<?php if (get_theme_mod('ppt_homeintro_subtitle') !='') { ?>
                         <span class="subheading"><?php echo get_theme_mod( 'ppt_homeintro_subtitle' ); ?></span>
 			<?php } else { ?>
-                        <span class="subheading"><?php esc_html_e( 'A Clean Blog Theme by Robert DeVore', 'pp-theme' ); ?></span>
+                        <span class="subheading"><?php esc_html_e( 'The Cornerstone of Content Creation.', 'pp-theme' ); ?></span>
 			<?php } ?>
                     </div>
 		    <!-- /.site-heading -->
