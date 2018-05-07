@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-		<?php do_action('cleanblog_single_top'); ?>
+		<?php do_action('ppt_single_top'); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<div class="postfooter">
-				<?php cleanblog_entry_footer(); ?>
+				<?php ppt_entry_footer(); ?>
 			</div>
 			<!-- /.postfooter -->
 
@@ -37,7 +37,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<?php do_action('cleanblog_single_bottom'); ?>
+		<?php do_action('ppt_single_bottom'); ?>
 
 	</div>
 	<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->

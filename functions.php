@@ -5,7 +5,7 @@
  * @package Clean Blog
  */
 
-if ( ! function_exists( 'cleanblog_setup' ) ) :
+if ( ! function_exists( 'ppt_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,7 +13,7 @@ if ( ! function_exists( 'cleanblog_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function cleanblog_setup() {
+function ppt_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -70,13 +70,13 @@ function cleanblog_setup() {
 	//	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'cleanblog_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'ppt_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // cleanblog_setup
-add_action( 'after_setup_theme', 'cleanblog_setup' );
+endif; // ppt_setup
+add_action( 'after_setup_theme', 'ppt_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -85,15 +85,15 @@ add_action( 'after_setup_theme', 'cleanblog_setup' );
  *
  * @global int $content_width
  */
-function cleanblog_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'cleanblog_content_width', 750 );
+function ppt_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ppt_content_width', 750 );
 }
-add_action( 'after_setup_theme', 'cleanblog_content_width', 0 );
+add_action( 'after_setup_theme', 'ppt_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function cleanblog_scripts() {
+function ppt_scripts() {
 	wp_enqueue_style( 'cleanblog-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'cleanblog-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'cleanblog-theme', get_template_directory_uri() . '/css/clean-blog.min.css' );
@@ -111,7 +111,7 @@ function cleanblog_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'cleanblog_scripts' );
+add_action( 'wp_enqueue_scripts', 'ppt_scripts' );
 
 /**
  * Custom template tags for this theme.

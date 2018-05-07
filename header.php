@@ -55,8 +55,8 @@
         </div>
         <!-- /.container -->
     </nav>
-	
-	<?php cleanblog_header(); ?>
+
+	<?php ppt_header(); ?>
 
     <!-- Main Content -->
     <div class="container">

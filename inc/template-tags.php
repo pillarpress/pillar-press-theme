@@ -7,13 +7,13 @@
  * @package Clean Blog
  */
 
-if ( ! function_exists( 'cleanblog_posts_navigation' ) ) :
+if ( ! function_exists( 'ppt_posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function cleanblog_posts_navigation() {
+function ppt_posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -59,11 +59,11 @@ function the_post_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'cleanblog_posted_on' ) ) :
+if ( ! function_exists( 'ppt_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function cleanblog_posted_on() {
+function ppt_posted_on() {
 	$author_id = '';
 	if (is_singular()) {
 		$author_id = get_queried_object()->post_author;
@@ -102,16 +102,16 @@ function cleanblog_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'cleanblog_entry_footer' ) ) :
+if ( ! function_exists( 'ppt_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function cleanblog_entry_footer() {
+function ppt_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'cleanblog' ) );
-		if ( $categories_list && cleanblog_categorized_blog() ) {
+		if ( $categories_list && ppt_categorized_blog() ) {
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s &nbsp;&middot;&nbsp; ', 'cleanblog' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
@@ -231,8 +231,8 @@ endif;
  *
  * @return bool
  */
-function cleanblog_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'cleanblog_categories' ) ) ) {
+function ppt_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'ppt_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -245,36 +245,36 @@ function cleanblog_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'cleanblog_categories', $all_the_cool_cats );
+		set_transient( 'ppt_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so cleanblog_categorized_blog should return true.
+		// This blog has more than 1 category so ppt_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so cleanblog_categorized_blog should return false.
+		// This blog has only 1 category so ppt_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in cleanblog_categorized_blog.
+ * Flush out the transients used in ppt_categorized_blog.
  */
-function cleanblog_category_transient_flusher() {
+function ppt_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'cleanblog_categories' );
+	delete_transient( 'ppt_categories' );
 }
-add_action( 'edit_category', 'cleanblog_category_transient_flusher' );
-add_action( 'save_post',     'cleanblog_category_transient_flusher' );
+add_action( 'edit_category', 'ppt_category_transient_flusher' );
+add_action( 'save_post',     'ppt_category_transient_flusher' );
 
-if ( ! function_exists( 'cleanblog_header' ) ) :
+if ( ! function_exists( 'ppt_header' ) ) :
 /**
  * Custom header codes for the home page, single posts and pages
  */
-function cleanblog_header() {
+function ppt_header() {
 	global $post;
 ?>
 
@@ -285,7 +285,7 @@ function cleanblog_header() {
 	<?php
 		$feat_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -294,7 +294,7 @@ function cleanblog_header() {
 							<?php if ( function_exists( 'the_subtitle' ) ) {
 								the_subtitle( '<h2 class="subheading">', '</h2>' );
 							} ?>
-                        <span class="meta"><?php cleanblog_posted_on(); ?></span>
+                        <span class="meta"><?php ppt_posted_on(); ?></span>
                     </div>
                 </div>
             </div>
@@ -310,7 +310,7 @@ function cleanblog_header() {
 	<?php
 		$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -334,7 +334,7 @@ function cleanblog_header() {
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>;')">
+    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>;')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -356,24 +356,24 @@ function cleanblog_header() {
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-	<?php if ( get_theme_mod('cleanblog_homeintro_image') !='' ) { ?>
-	<?php $headerimg = get_theme_mod( 'cleanblog_homeintro_image' ); ?>
+	<?php if ( get_theme_mod('ppt_homeintro_image') !='' ) { ?>
+	<?php $headerimg = get_theme_mod( 'ppt_homeintro_image' ); ?>
 	<?php } else { ?>
 	<?php $headerimg = get_template_directory_uri() . '/img/home-bg.jpg'; ?>
 	<?php } ?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'cleanblog_header_background_color' ); ?>; background-image: url('<?php echo $headerimg; ?>')">
+    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $headerimg; ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-			<?php if ( get_theme_mod('cleanblog_homeintro_title') !='' ) { ?>
-			<h1 class="homeintro"><?php echo get_theme_mod( 'cleanblog_homeintro_title' ); ?></h1>
+			<?php if ( get_theme_mod('ppt_homeintro_title') !='' ) { ?>
+			<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
 			<?php } else { ?>
                         <h1><?php esc_html_e( 'Clean Blog', 'cleanblog' ); ?></h1>
 			<?php } ?>
                         <hr class="small">
-			<?php if (get_theme_mod('cleanblog_homeintro_subtitle') !='') { ?>
-                        <span class="subheading"><?php echo get_theme_mod( 'cleanblog_homeintro_subtitle' ); ?></span>
+			<?php if (get_theme_mod('ppt_homeintro_subtitle') !='') { ?>
+                        <span class="subheading"><?php echo get_theme_mod( 'ppt_homeintro_subtitle' ); ?></span>
 			<?php } else { ?>
                         <span class="subheading"><?php esc_html_e( 'A Clean Blog Theme by Robert DeVore', 'cleanblog' ); ?></span>
 			<?php } ?>
@@ -392,11 +392,11 @@ function cleanblog_header() {
 <?php }
 endif;
 
-if ( ! function_exists( 'cleanblog_social' ) ) :
+if ( ! function_exists( 'ppt_social' ) ) :
 /**
  * Adds the social profile links into the theme's footer.php file
  */
-function cleanblog_social() {
+function ppt_social() {
 	$social_networks = array(
 		'twitter',
 		'facebook',
@@ -414,9 +414,9 @@ function cleanblog_social() {
 
 	<ul class="list-inline text-center">
 		<?php foreach ( $social_networks as $network ) {
-			if ( get_theme_mod( 'cleanblog_social_'.$network ) !='' ) { ?>
+			if ( get_theme_mod( 'ppt_social_'.$network ) !='' ) { ?>
 				<li id="social-<?php echo $network; ?>">
-					<a href="<?php echo get_theme_mod( 'cleanblog_social_'.$network ); ?>" target="_blank">
+					<a href="<?php echo get_theme_mod( 'ppt_social_'.$network ); ?>" target="_blank">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-<?php echo $network; ?> fa-stack-1x fa-inverse"></i>

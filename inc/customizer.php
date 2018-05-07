@@ -5,7 +5,7 @@
  *
  * @param      object    $wp_customize    The WordPress Theme Customizer
  */
-function cleanblog_register_social_links( $wp_customize ) {
+function ppt_register_social_links( $wp_customize ) {
 	$social_networks = array(
 		'Twitter',
 		'Facebook',
@@ -22,7 +22,7 @@ function cleanblog_register_social_links( $wp_customize ) {
 	);
 
 	$wp_customize->add_section(
-		'cleanblog_social_links',
+		'ppt_social_links',
 		array(
 			'title'     => 'Social Links',
 			'priority'  => 30
@@ -30,20 +30,20 @@ function cleanblog_register_social_links( $wp_customize ) {
 	);
 
 	foreach ( $social_networks as $network ) {
-		$link_class = 'cleanblog_social_'.preg_replace( '[^a-z]', '', strtolower( $network ) );
+		$link_class = 'ppt_social_'.preg_replace( '[^a-z]', '', strtolower( $network ) );
 
 		$wp_customize->add_setting(
 			$link_class,
 			array(
 				'default'            => '',
-				'sanitize_callback'  => 'cleanblog_sanitize_input',
+				'sanitize_callback'  => 'ppt_sanitize_input',
 				'transport'          => 'refresh'
 			)
 		);
 		$wp_customize->add_control(
 			$link_class,
 			array(
-				'section'  => 'cleanblog_social_links',
+				'section'  => 'ppt_social_links',
 				'label'    => $network,
 				'type'     => 'text'
 			)
@@ -59,13 +59,13 @@ function cleanblog_register_social_links( $wp_customize ) {
  * @since      1.0.0
  * @version    1.0.0
  */
-function cleanblog_register_theme_customizer( $wp_customize ) {
+function ppt_register_theme_customizer( $wp_customize ) {
 	/* Link Color */
 	$wp_customize->add_setting(
-		'cleanblog_link_color',
+		'ppt_link_color',
 		array(
 			'default'     		 => '#0085a1',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
 	);
@@ -76,17 +76,17 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 			array(
 			    'label'      => 'Link Color',
 			    'section'    => 'colors',
-			    'settings'   => 'cleanblog_link_color'
+			    'settings'   => 'ppt_link_color'
 			)
 		)
 	);
 
 	/* Header Background Color */
 	$wp_customize->add_setting(
-		'cleanblog_header_background_color',
+		'ppt_header_background_color',
 		array(
 			'default'     		 => '#444',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
 	);
@@ -97,7 +97,7 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 			array(
 			    'label'      => 'Header Background Color',
 			    'section'    => 'colors',
-			    'settings'   => 'cleanblog_header_background_color'
+			    'settings'   => 'ppt_header_background_color'
 			)
 		)
 	);
@@ -106,13 +106,13 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Social Links' section
 	 *-----------------------------------------------------------*/
-	cleanblog_register_social_links( $wp_customize );
+	ppt_register_social_links( $wp_customize );
 
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Display Options' section
 	 *-----------------------------------------------------------*/
 	$wp_customize->add_section(
-		'cleanblog_display_options',
+		'ppt_display_options',
 		array(
 			'title'     => 'Display Options',
 			'priority'  => 40
@@ -121,17 +121,17 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Show or Hide post excerpt */
 	$wp_customize->add_setting(
-		'cleanblog_post_excerpt',
+		'ppt_post_excerpt',
 		array(
 			'default'   => 'hide',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport' => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_post_excerpt',
+		'ppt_post_excerpt',
 		array(
-			'section'  => 'cleanblog_display_options',
+			'section'  => 'ppt_display_options',
 			'label'    => 'Post Excerpts',
 			'type'     => 'radio',
 			'choices'  => array(
@@ -143,17 +143,17 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Darken Header? */
 	$wp_customize->add_setting(
-		'cleanblog_darken_header',
+		'ppt_darken_header',
 		array(
 			'default'   => 'no',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport' => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_darken_header',
+		'ppt_darken_header',
 		array(
-			'section'  => 'cleanblog_display_options',
+			'section'  => 'ppt_display_options',
 			'label'    => 'Darken Header?',
 			'type'     => 'radio',
 			'choices'  => array(
@@ -165,17 +165,17 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Parallax Header? */
 	$wp_customize->add_setting(
-		'cleanblog_parallax_header',
+		'ppt_parallax_header',
 		array(
 			'default'   => 'no',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport' => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_parallax_header',
+		'ppt_parallax_header',
 		array(
-			'section'  => 'cleanblog_display_options',
+			'section'  => 'ppt_display_options',
 			'label'    => 'Parallax Header?',
 			'type'     => 'radio',
 			'choices'  => array(
@@ -187,17 +187,17 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Display Copyright */
 	$wp_customize->add_setting(
-		'cleanblog_footer_copyright_text',
+		'ppt_footer_copyright_text',
 		array(
 			'default'            => '',
-			'sanitize_callback'  => 'cleanblog_sanitize_copyright',
+			'sanitize_callback'  => 'ppt_sanitize_copyright',
 			'transport'          => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_footer_copyright_text',
+		'ppt_footer_copyright_text',
 		array(
-			'section'  => 'cleanblog_display_options',
+			'section'  => 'ppt_display_options',
 			'label'    => 'Copyright Message',
 			'type'     => 'text'
 		)
@@ -207,7 +207,7 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 	 * Defining our own 'Home Intro' section
 	 *-----------------------------------------------------------*/
 	$wp_customize->add_section(
-		'cleanblog_homeintro_options',
+		'ppt_homeintro_options',
 		array(
 			'title'     => 'Home Intro',
 			'priority'  => 20
@@ -216,38 +216,38 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Background Image */
 	$wp_customize->add_setting(
-		'cleanblog_homeintro_image',
+		'ppt_homeintro_image',
 		array(
 		    'default'     		 => get_template_directory_uri() . '/img/home-bg.jpg',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 		    'transport'   		 => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
-			'cleanblog_homeintro_image',
+			'ppt_homeintro_image',
 			array(
 			    'label'    => 'Background Image',
-			    'settings' => 'cleanblog_homeintro_image',
-			    'section'  => 'cleanblog_homeintro_options'
+			    'settings' => 'ppt_homeintro_image',
+			    'section'  => 'ppt_homeintro_options'
 			)
 		)
 	);
 
 	/* Home Intro Title */
 	$wp_customize->add_setting(
-		'cleanblog_homeintro_title',
+		'ppt_homeintro_title',
 		array(
 			'default'            => '',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport'          => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_homeintro_title',
+		'ppt_homeintro_title',
 		array(
-			'section'  => 'cleanblog_homeintro_options',
+			'section'  => 'ppt_homeintro_options',
 			'label'    => 'Title',
 			'type'     => 'text'
 		)
@@ -255,25 +255,25 @@ function cleanblog_register_theme_customizer( $wp_customize ) {
 
 	/* Home Intro Subtitle */
 	$wp_customize->add_setting(
-		'cleanblog_homeintro_subtitle',
+		'ppt_homeintro_subtitle',
 		array(
 			'default'            => '',
-			'sanitize_callback'  => 'cleanblog_sanitize_input',
+			'sanitize_callback'  => 'ppt_sanitize_input',
 			'transport'          => 'refresh'
 		)
 	);
 	$wp_customize->add_control(
-		'cleanblog_homeintro_subtitle',
+		'ppt_homeintro_subtitle',
 		array(
-			'section'  => 'cleanblog_homeintro_options',
+			'section'  => 'ppt_homeintro_options',
 			'label'    => 'Subtitle',
 			'type'     => 'text'
 		)
 	);
 
-} // end cleanblog_register_theme_customizer
+} // end ppt_register_theme_customizer
 
-add_action( 'customize_register', 'cleanblog_register_theme_customizer' );
+add_action( 'customize_register', 'ppt_register_theme_customizer' );
 /**
  * Sanitizes the incoming input and returns it prior to serialization.
  *
@@ -283,11 +283,11 @@ add_action( 'customize_register', 'cleanblog_register_theme_customizer' );
  * @since      1.0.0
  * @version    1.0.0
  */
-function cleanblog_sanitize_input( $input ) {
+function ppt_sanitize_input( $input ) {
 	return strip_tags( stripslashes( $input ) );
-} // end cleanblog_sanitize_input
+} // end ppt_sanitize_input
 
-function cleanblog_sanitize_copyright( $input ) {
+function ppt_sanitize_copyright( $input ) {
 	$allowed = array(
 		's'			=> array(),
 		'br'		=> array(),
@@ -352,7 +352,7 @@ function cleanblog_sanitize_copyright( $input ) {
 		),
 	);
     return wp_kses( $input, $allowed );
-} // end cleanblog_sanitize_copyright
+} // end ppt_sanitize_copyright
 
 /**
  * Writes styles out the `<head>` element of the page based on the configuration options
@@ -361,31 +361,31 @@ function cleanblog_sanitize_copyright( $input ) {
  * @since      1.0.0
  * @version    1.0.0
  */
-function cleanblog_customizer_css() {
+function ppt_customizer_css() {
 ?>
 	<style type="text/css">
 		-moz-selection,
 		::selection{
-			background: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 		body{
-			webkit-tap-highlight-color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			webkit-tap-highlight-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 		a:hover {
-			color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 		.pager li>a:hover, .pager li>a:focus {
 			color: #fff;
-			background-color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
-			border: 1px solid <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			background-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			border: 1px solid <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 
 		button:hover,
 		input[type="button"]:hover,
 		input[type="reset"]:hover,
 		input[type="submit"]:hover {
-			background: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
-			border-color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			border-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 
 		button:focus,
@@ -396,8 +396,8 @@ function cleanblog_customizer_css() {
 		input[type="button"]:active,
 		input[type="reset"]:active,
 		input[type="submit"]:active {
-			background: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
-			border-color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			border-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 
 		input[type="text"]:focus,
@@ -406,14 +406,14 @@ function cleanblog_customizer_css() {
 		input[type="password"]:focus,
 		input[type="search"]:focus,
 		textarea:focus {
-			border: 1px solid <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			border: 1px solid <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 
 		.navbar-custom.is-fixed .nav li a:hover, .navbar-custom.is-fixed .nav li a:focus {
-			color: <?php echo get_theme_mod( 'cleanblog_link_color' ); ?>;
+			color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
 		}
 
-		<?php if ( get_theme_mod( 'cleanblog_darken_header' ) !== 'no' ) { ?>
+		<?php if ( get_theme_mod( 'ppt_darken_header' ) !== 'no' ) { ?>
 		body.admin-bar .navbar-custom.is-fixed { top:-32px; }
 
 		header.intro-header { position: relative; }
@@ -440,15 +440,15 @@ function cleanblog_customizer_css() {
 		z-index: 9999;
 		}
 		<?php } ?>
-		<?php if ( get_theme_mod( 'cleanblog_parallax_header' ) !== 'no' ) { ?>
+		<?php if ( get_theme_mod( 'ppt_parallax_header' ) !== 'no' ) { ?>
 		.intro-header {
 			background-attachment: fixed;
 		}
 		<?php } ?>
 	</style>
 <?php
-} // end cleanblog_customizer_css
-add_action( 'wp_head', 'cleanblog_customizer_css' );
+} // end ppt_customizer_css
+add_action( 'wp_head', 'ppt_customizer_css' );
 /**
  * Registers the Theme Customizer Preview with WordPress.
  *
@@ -456,7 +456,7 @@ add_action( 'wp_head', 'cleanblog_customizer_css' );
  * @since      1.0.0
  * @version    1.0.0
  */
-function cleanblog_customizer_live_preview() {
+function ppt_customizer_live_preview() {
 	wp_enqueue_script(
 		'cleanblog-theme-customizer',
 		get_template_directory_uri() . '/js/customizer.js',
@@ -464,5 +464,5 @@ function cleanblog_customizer_live_preview() {
 		'1.0.0',
 		true
 	);
-} // end cleanblog_customizer_live_preview
-add_action( 'customize_preview_init', 'cleanblog_customizer_live_preview' );
+} // end ppt_customizer_live_preview
+add_action( 'customize_preview_init', 'ppt_customizer_live_preview' );

@@ -9,7 +9,7 @@ get_header(); ?>
 
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-			<?php do_action('cleanblog_404_top'); ?>
+			<?php do_action('ppt_404_top'); ?>
 
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'cleanblog' ); ?></h1>
 			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cleanblog' ); ?></p>
@@ -18,7 +18,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( cleanblog_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+					<?php if ( ppt_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'cleanblog' ); ?></h2>
 						<ul>
@@ -43,7 +43,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-			<?php do_action('cleanblog_404_bottom'); ?>
+			<?php do_action('ppt_404_bottom'); ?>
 
 		</div>
 		<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->

@@ -3,45 +3,37 @@
  * Sample implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
- * You can add an optional custom header image to header.php like so ...
- *
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
- *
  * @package Clean Blog
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses cleanblog_header_style()
- * @uses cleanblog_admin_header_style()
- * @uses cleanblog_admin_header_image()
+ * @uses ppt_header_style()
+ * @uses ppt_admin_header_style()
+ * @uses ppt_admin_header_image()
  */
-function cleanblog_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'cleanblog_custom_header_args', array(
+function ppt_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'ppt_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'FFF',
 		'width'                  => 1900,
 		'height'                 => 872,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'cleanblog_header_style',
-		'admin-head-callback'    => 'cleanblog_admin_header_style',
-		'admin-preview-callback' => 'cleanblog_admin_header_image',
+		'wp-head-callback'       => 'ppt_header_style',
+		'admin-head-callback'    => 'ppt_admin_header_style',
+		'admin-preview-callback' => 'ppt_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'cleanblog_custom_header_setup' );
+add_action( 'after_setup_theme', 'ppt_custom_header_setup' );
 
-if ( ! function_exists( 'cleanblog_header_style' ) ) :
+if ( ! function_exists( 'ppt_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see cleanblog_custom_header_setup().
+ * @see ppt_custom_header_setup().
  */
-function cleanblog_header_style() {
+function ppt_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -74,15 +66,15 @@ function cleanblog_header_style() {
 	</style>
 	<?php
 }
-endif; // cleanblog_header_style
+endif; // ppt_header_style
 
-if ( ! function_exists( 'cleanblog_admin_header_style' ) ) :
+if ( ! function_exists( 'ppt_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see cleanblog_custom_header_setup().
+ * @see ppt_custom_header_setup().
  */
-function cleanblog_admin_header_style() {
+function ppt_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -102,15 +94,15 @@ function cleanblog_admin_header_style() {
 	</style>
 <?php
 }
-endif; // cleanblog_admin_header_style
+endif; // ppt_admin_header_style
 
-if ( ! function_exists( 'cleanblog_admin_header_image' ) ) :
+if ( ! function_exists( 'ppt_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see cleanblog_custom_header_setup().
+ * @see ppt_custom_header_setup().
  */
-function cleanblog_admin_header_image() {
+function ppt_admin_header_image() {
 ?>
 	<div id="headimg">
 		<h1 class="displaying-header-text">
@@ -123,4 +115,4 @@ function cleanblog_admin_header_image() {
 	</div>
 <?php
 }
-endif; // cleanblog_admin_header_image
+endif; // ppt_admin_header_image
