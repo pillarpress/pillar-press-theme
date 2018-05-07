@@ -1,4 +1,4 @@
-pp-theme<?php
+<?php
 /**
  * Pillar Press - Theme functions and definitions
  *
