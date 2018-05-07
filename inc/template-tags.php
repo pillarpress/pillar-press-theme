@@ -405,7 +405,7 @@ function ppt_social() {
 		'instagram',
 		'flickr',
 		'medium',
-		'vine',
+		'snapchat',
 		'tumblr',
 		'youtube',
 	); ?>
