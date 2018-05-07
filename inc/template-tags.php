@@ -356,7 +356,7 @@ function ppt_header() {
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-	<?php if ( get_theme_mod('ppt_homeintro_image') !='' ) { ?>
+	<?php if ( get_theme_mod( 'ppt_homeintro_image' ) !='' ) { ?>
 	<?php $headerimg = get_theme_mod( 'ppt_homeintro_image' ); ?>
 	<?php } else { ?>
 	<?php $headerimg = get_template_directory_uri() . '/img/home-bg.jpg'; ?>
@@ -366,13 +366,13 @@ function ppt_header() {
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-			<?php if ( get_theme_mod('ppt_homeintro_title') !='' ) { ?>
+			<?php if ( get_theme_mod( 'ppt_homeintro_title' ) !='' ) { ?>
 			<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
 			<?php } else { ?>
                         <h1><?php esc_html_e( 'Pillar Press', 'pp-theme' ); ?></h1>
 			<?php } ?>
                         <hr class="small">
-			<?php if (get_theme_mod('ppt_homeintro_subtitle') !='') { ?>
+			<?php if (get_theme_mod( 'ppt_homeintro_subtitle' ) !='') { ?>
                         <span class="subheading"><?php echo get_theme_mod( 'ppt_homeintro_subtitle' ); ?></span>
 			<?php } else { ?>
                         <span class="subheading"><?php esc_html_e( 'The Cornerstone of Content Creation.', 'pp-theme' ); ?></span>

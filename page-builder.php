@@ -11,7 +11,7 @@ get_header(); ?>
 
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-			<?php do_action('ppt_page_top'); ?>
+			<?php do_action( 'ppt_page_top' ); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-			<?php do_action('ppt_page_bottom'); ?>
+			<?php do_action( 'ppt_page_bottom' ); ?>
 
 		</div>
 		<!-- /.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1 -->
