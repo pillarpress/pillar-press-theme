@@ -1,6 +1,6 @@
 <?php
 /**
- * Pillar Press functions and definitions
+ * Pillar Press - Theme functions and definitions
  *
  * @package Pillar Press
  */
