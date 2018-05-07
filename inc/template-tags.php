@@ -21,10 +21,10 @@ function ppt_posts_navigation() {
 	?>
 	<ul class="pager">
 		<?php if ( get_next_posts_link() ) : ?>
-		<li class="next"><?php next_posts_link( esc_html__( 'Older posts', 'cleanblog' ) ); ?></li>
+		<li class="next"><?php next_posts_link( esc_html__( 'Older posts', 'pp-theme' ) ); ?></li>
 		<?php endif; ?>
 		<?php if ( get_previous_posts_link() ) : ?>
-		<li class="previous"><?php previous_posts_link( esc_html__( 'Newer posts', 'cleanblog' ) ); ?></li>
+		<li class="previous"><?php previous_posts_link( esc_html__( 'Newer posts', 'pp-theme' ) ); ?></li>
 		<?php endif; ?>
 	</ul>
 	<?php
@@ -47,7 +47,7 @@ function the_post_navigation() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'cleanblog' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'pp-theme' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
@@ -82,18 +82,18 @@ function ppt_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'on %s', 'post date', 'cleanblog' ),
+		esc_html_x( 'on %s', 'post date', 'pp-theme' ),
 		$time_string
 	);
 
 	$byauthor = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID', $author_id ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'cleanblog' ), get_the_author_meta( "display_name", $author_id ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'pp-theme' ), get_the_author_meta( "display_name", $author_id ) ) ),
 		get_the_author_meta( "display_name", $author_id )
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'Posted by %s', 'posted by', 'cleanblog' ),
+		esc_html_x( 'Posted by %s', 'posted by', 'pp-theme' ),
 		$byauthor
 	);
 
@@ -110,25 +110,25 @@ function ppt_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'cleanblog' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'pp-theme' ) );
 		if ( $categories_list && ppt_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s &nbsp;&middot;&nbsp; ', 'cleanblog' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s &nbsp;&middot;&nbsp; ', 'pp-theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'cleanblog' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'pp-theme' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'cleanblog' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'pp-theme' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'cleanblog' ), esc_html__( '1 Comment', 'cleanblog' ), esc_html__( '% Comments', 'cleanblog' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'pp-theme' ), esc_html__( '1 Comment', 'pp-theme' ), esc_html__( '% Comments', 'pp-theme' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'cleanblog' ), '<span class="edit-link"> &nbsp;&middot;&nbsp; ', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'pp-theme' ), '<span class="edit-link"> &nbsp;&middot;&nbsp; ', '</span>' );
 }
 endif;
 
@@ -145,45 +145,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( esc_html__( 'Category: %s', 'cleanblog' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( 'Category: %s', 'pp-theme' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( esc_html__( 'Tag: %s', 'cleanblog' ), single_tag_title( '', false ) );
+		$title = sprintf( esc_html__( 'Tag: %s', 'pp-theme' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( esc_html__( 'Author: %s', 'cleanblog' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( esc_html__( 'Author: %s', 'pp-theme' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( esc_html__( 'Year: %s', 'cleanblog' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'cleanblog' ) ) );
+		$title = sprintf( esc_html__( 'Year: %s', 'pp-theme' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'pp-theme' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( esc_html__( 'Month: %s', 'cleanblog' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', 'cleanblog' ) ) );
+		$title = sprintf( esc_html__( 'Month: %s', 'pp-theme' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', 'pp-theme' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( esc_html__( 'Day: %s', 'cleanblog' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'cleanblog' ) ) );
+		$title = sprintf( esc_html__( 'Day: %s', 'pp-theme' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'pp-theme' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = esc_html_x( 'Asides', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Asides', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = esc_html_x( 'Galleries', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Galleries', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = esc_html_x( 'Images', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Images', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = esc_html_x( 'Videos', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Videos', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = esc_html_x( 'Quotes', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Quotes', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = esc_html_x( 'Links', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Links', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = esc_html_x( 'Statuses', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Statuses', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = esc_html_x( 'Audio', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Audio', 'post format archive title', 'pp-theme' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = esc_html_x( 'Chats', 'post format archive title', 'cleanblog' );
+			$title = esc_html_x( 'Chats', 'post format archive title', 'pp-theme' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( esc_html__( 'Archives: %s', 'cleanblog' ), post_type_archive_title( '', false ) );
+		$title = sprintf( esc_html__( 'Archives: %s', 'pp-theme' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( esc_html__( '%1$s: %2$s', 'cleanblog' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( esc_html__( '%1$s: %2$s', 'pp-theme' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = esc_html__( 'Archives', 'cleanblog' );
+		$title = esc_html__( 'Archives', 'pp-theme' );
 	}
 
 	/**
@@ -339,9 +339,9 @@ function ppt_header() {
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1><?php esc_html_e( 'Search Results', 'cleanblog' ); ?></h1>
+                        <h1><?php esc_html_e( 'Search Results', 'pp-theme' ); ?></h1>
                         <hr class="small">
-                        <span class="subheading"><?php printf( esc_html__( 'You searched for: "%s"', 'cleanblog' ), '<span>' . get_search_query() . '</span>' ); ?></span>
+                        <span class="subheading"><?php printf( esc_html__( 'You searched for: "%s"', 'pp-theme' ), '<span>' . get_search_query() . '</span>' ); ?></span>
                     </div>
 		    <!-- /.site-heading -->
                 </div>
@@ -369,13 +369,13 @@ function ppt_header() {
 			<?php if ( get_theme_mod('ppt_homeintro_title') !='' ) { ?>
 			<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
 			<?php } else { ?>
-                        <h1><?php esc_html_e( 'Clean Blog', 'cleanblog' ); ?></h1>
+                        <h1><?php esc_html_e( 'Clean Blog', 'pp-theme' ); ?></h1>
 			<?php } ?>
                         <hr class="small">
 			<?php if (get_theme_mod('ppt_homeintro_subtitle') !='') { ?>
                         <span class="subheading"><?php echo get_theme_mod( 'ppt_homeintro_subtitle' ); ?></span>
 			<?php } else { ?>
-                        <span class="subheading"><?php esc_html_e( 'A Clean Blog Theme by Robert DeVore', 'cleanblog' ); ?></span>
+                        <span class="subheading"><?php esc_html_e( 'A Clean Blog Theme by Robert DeVore', 'pp-theme' ); ?></span>
 			<?php } ?>
                     </div>
 		    <!-- /.site-heading -->
