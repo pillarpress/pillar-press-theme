@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Registers a selection of social network links with the theme customizer
  *
@@ -55,7 +54,7 @@ function ppt_register_social_links( $wp_customize ) {
  * Registers options with the Theme Customizer
  *
  * @param      object    $wp_customize    The WordPress Theme Customizer
- * @package    cleanblog
+ * @package    Pillar Press
  * @since      1.0.0
  * @version    1.0.0
  */
@@ -279,7 +278,7 @@ add_action( 'customize_register', 'ppt_register_theme_customizer' );
  *
  * @param      string    $input    The string to sanitize
  * @return     string              The sanitized string
- * @package    cleanblog
+ * @package    Pillar Press
  * @since      1.0.0
  * @version    1.0.0
  */
@@ -452,13 +451,13 @@ add_action( 'wp_head', 'ppt_customizer_css' );
 /**
  * Registers the Theme Customizer Preview with WordPress.
  *
- * @package    cleanblog
+ * @package    Pillar Press
  * @since      1.0.0
  * @version    1.0.0
  */
 function ppt_customizer_live_preview() {
 	wp_enqueue_script(
-		'cleanblog-theme-customizer',
+		'ppt-theme-customizer',
 		get_template_directory_uri() . '/js/customizer.js',
 		array( 'customize-preview' ),
 		'1.0.0',
