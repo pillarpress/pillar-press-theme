@@ -11,8 +11,8 @@ get_header(); ?>
 
 		<?php do_action( 'ppt_404_top' ); ?>
 
-		<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'pp-theme' ); ?></h1>
-		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pp-theme' ); ?></p>
+		<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'pillar-press-theme' ); ?></h1>
+		<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pillar-press-theme' ); ?></p>
 
 		<?php get_search_form(); ?>
 
@@ -20,7 +20,7 @@ get_header(); ?>
 
 		<?php if ( ppt_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 		<div class="widget widget_categories">
-			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'pp-theme' ); ?></h2>
+			<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'pillar-press-theme' ); ?></h2>
 			<ul>
 			<?php
 				wp_list_categories( array(
@@ -37,7 +37,7 @@ get_header(); ?>
 
 		<?php
 			/* translators: %1$s: smiley */
-			$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'pp-theme' ), convert_smilies( ':)' ) ) . '</p>';
+			$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'pillar-press-theme' ), convert_smilies( ':)' ) ) . '</p>';
 			the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 		?>
 

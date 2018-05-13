@@ -17,10 +17,8 @@ function ppt_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Pillar Press, use a find and replace
-	 * to change 'pp-theme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'pp-theme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'pillar-press-theme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,7 +40,7 @@ function ppt_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'pp-theme' ),
+		'primary' => esc_html__( 'Primary Menu', 'pillar-press-theme' ),
 	) );
 
 	/*
@@ -153,7 +151,7 @@ add_filter( 'excerpt_length', 'ppt_excerpt_length', 999 );
 
 // Add a Read More link to the end of the excerpt.
 function ppt_excerpt_more_link( $more ) {
-	return ' ... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'pp-theme' ) . '</a>';
+	return ' ... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'pillar-press-theme' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'ppt_excerpt_more_link' );
 
