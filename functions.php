@@ -62,6 +62,10 @@ function ppt_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Adds theme support for wide and full Gutenberg blocks.
+	add_theme_support( 'align-wide' );
+
 }
 endif; // ppt_setup
 add_action( 'after_setup_theme', 'ppt_setup' );
