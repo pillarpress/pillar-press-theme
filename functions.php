@@ -135,35 +135,37 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Remove container DIV from navigation menu in header.
  */
-function my_wp_nav_menu_args( $args = '' ) {
+function ppt_wp_nav_menu_args( $args = '' ) {
 	$args['container'] = false;
 	return $args;
 }
-add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
+add_filter( 'wp_nav_menu_args', 'ppt_wp_nav_menu_args' );
 
 /**
  * Customizing the excerpt
  */
 
-// Customize the excerpt length
-function custom_excerpt_length( $length ) {
+// Customize the excerpt length.
+function ppt_excerpt_length( $length ) {
 	return 60;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'ppt_excerpt_length', 999 );
 
-// Add a Read More link to the end of the excerpt
-function custom_excerpt_more( $more ) {
+// Add a Read More link to the end of the excerpt.
+function ppt_excerpt_more_link( $more ) {
 	return ' ... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'pp-theme' ) . '</a>';
 }
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+add_filter( 'excerpt_more', 'ppt_excerpt_more_link' );
 
-// Add a class to the <p> wrap around the excerpt
-function add_class_to_excerpt( $excerpt ) {
+// Add a class to the <p> wrap around the excerpt.
+function ppt_add_class_to_excerpt( $excerpt ) {
     return str_replace( '<p', '<p class="excerpt"', $excerpt );
 }
-add_filter( "the_excerpt", "add_class_to_excerpt" );
+add_filter( "the_excerpt", "ppt_add_class_to_excerpt" );
 
-// Add a `gutenberg-page` class to pages using Gutenberg.
+/**
+ * Add a `gutenberg-page` class to pages using Gutenberg.
+ */
 add_action(
   'body_class', function( $classes ) {
     if ( function_exists( 'the_gutenberg_project' ) && gutenberg_post_has_blocks( get_the_ID() ) ) {
