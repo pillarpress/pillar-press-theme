@@ -3,7 +3,7 @@
  */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
   color: #222;
   position: relative;
@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Vollkorn, Georgia, 'Times New Roman', serif;
   font-weight: 800;
 }
 a {
@@ -60,7 +60,7 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 999;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Vollkorn, Georgia, 'Times New Roman', serif;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
@@ -197,13 +197,13 @@ hr.small {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Vollkorn, Georgia, 'Times New Roman', serif;
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
@@ -370,7 +370,7 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a,
 .pager li > span {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Vollkorn, Georgia, 'Times New Roman', serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
