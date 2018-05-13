@@ -424,3 +424,25 @@ body.page-template-page-builder hr.footer {
 body.siteorigin-panels .intro-header {
 	margin-bottom: 0;
 }
+
+/** Gutenberg specific CSS Styles */
+
+.alignwide {
+    width: auto;
+    max-width: 1000%;
+    margin-right: calc(25% - 25vw);
+    margin-left: calc(25% - 25vw);
+}
+
+.alignfull {
+    width: auto;
+    max-width: 1000%;
+
+    margin-right: calc(50.75% - 50vw);
+    margin-left: calc(50.75% - 50vw);
+}
+
+.alignwide > *,
+.alignfull > * {
+    width: 100%;
+}
