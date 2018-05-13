@@ -90,8 +90,7 @@ function ppt_scripts() {
 	wp_enqueue_style( 'pillar-press-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'pillar-press-theme', get_template_directory_uri() . '/css/pp-theme.min.css' );
 	wp_enqueue_style( 'pillar-press-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-	wp_enqueue_style( 'pillar-press-lora', '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' );
-	wp_enqueue_style( 'pillar-press-opensans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
+	wp_enqueue_style( 'pillar-press-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Vollkorn:400,600,900' );
 
 	wp_enqueue_script( 'pillar-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180507', true );
 	wp_enqueue_script( 'pillar-press-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180507', true );
