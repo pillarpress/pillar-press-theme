@@ -63,7 +63,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_link_color',
 		array(
-			'default'           => '#0085a1',
+			'default'           => '#4E5C6B',
 			'sanitize_callback' => 'ppt_sanitize_input',
 			'transport'         => 'refresh'
 		)
@@ -84,7 +84,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'ppt_header_background_color',
 		array(
-			'default'           => '#444',
+			'default'           => '#222',
 			'sanitize_callback' => 'ppt_sanitize_input',
 			'transport'         => 'refresh'
 		)
