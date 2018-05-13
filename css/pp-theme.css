@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   font-family: Vollkorn, Georgia, 'Times New Roman', serif;
-  font-weight: 800;
+  font-weight: 600;
 }
 a {
   color: #222;
@@ -60,7 +60,7 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 999;
-  font-family: Vollkorn, Georgia, 'Times New Roman', serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
