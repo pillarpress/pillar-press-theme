@@ -66,6 +66,14 @@ function ppt_setup() {
 	// Adds theme support for wide and full Gutenberg blocks.
 	add_theme_support( 'align-wide' );
 
+	// Add custom Gutenberg Editor color palette.
+	add_theme_support( 'editor-color-palette',
+		'#f9f9f9',
+		'#555555',
+		get_theme_mod( 'ppt_link_color' ),
+		get_theme_mod( 'ppt_header_background_color' )
+	);
+
 }
 endif; // ppt_setup
 add_action( 'after_setup_theme', 'ppt_setup' );
