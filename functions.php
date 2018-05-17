@@ -95,14 +95,13 @@ function ppt_scripts() {
 	wp_enqueue_style( 'pillar-press-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'pillar-press-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'pillar-press-theme', get_template_directory_uri() . '/css/pp-theme.min.css' );
-	wp_enqueue_style( 'pillar-press-fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_style( 'pillar-press-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Vollkorn:400,600,900' );
 
-	wp_enqueue_script( 'pillar-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180507', true );
-	wp_enqueue_script( 'pillar-press-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180507', true );
-	wp_enqueue_script( 'pillar-press-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '20180507', true );
-	wp_enqueue_script( 'pillar-press-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20180507', true );
-	wp_enqueue_script( 'pillar-press-theme', get_template_directory_uri() . '/js/pp-theme.min.js', array(), '20180507', true );
+	wp_enqueue_script( 'pillar-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180517', true );
+	wp_enqueue_script( 'pillar-press-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180517', true );
+	wp_enqueue_script( 'pillar-press-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '20180517', true );
+	wp_enqueue_script( 'pillar-press-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20180517', true );
+	wp_enqueue_script( 'pillar-press-theme', get_template_directory_uri() . '/js/pp-theme.min.js', array(), '20180517', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
