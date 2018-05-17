@@ -101,7 +101,7 @@ class Single_Post_Template_Plugin {
 	function add_metabox() {
 
 		if ( $this->get_post_templates() ) {
-			add_meta_box( 'pt_post_templates', __( 'Single Post Template', 'pillar-press-theme' ), array( $this, 'metabox' ), 'post', 'normal', 'high' );
+			add_meta_box( 'pt_post_templates', __( 'Single Post Template', 'pillar-press' ), array( $this, 'metabox' ), 'post', 'normal', 'high' );
 		}
 
 	}
@@ -111,9 +111,9 @@ class Single_Post_Template_Plugin {
 		?>
 		<input type="hidden" name="pt_noncename" id="pt_noncename" value="<?php echo wp_create_nonce( plugin_basename( __FILE__ ) ); ?>" />
 
-		<label class="hidden" for="post_template"><?php  esc_html_e( 'Post Template', 'pillar-press-theme' ); ?></label><br />
+		<label class="hidden" for="post_template"><?php  esc_html_e( 'Post Template', 'pillar-press' ); ?></label><br />
 		<select name="_wp_post_template" id="post_template" class="dropdown">
-			<option value=""><?php esc_html_e( 'Default', 'pillar-press-theme' ); ?></option>
+			<option value=""><?php esc_html_e( 'Default', 'pillar-press' ); ?></option>
 			<?php $this->post_templates_dropdown(); ?>
 		</select>
 		<?php

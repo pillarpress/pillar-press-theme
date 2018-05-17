@@ -24,14 +24,14 @@ Coming soon.
 ### Using The WordPress Dashboard
 
 1. Navigate to the 'Add New' Themes Dashboard
-1. Select `pillar-press-theme.zip` from your computer
+1. Select `pillar-press.zip` from your computer
 1. Upload
 1. Activate the theme on the WordPress Themes Dashboard
 
 ### Using FTP
 
-1. Extract `pillar-press-theme.zip` to your computer
-1. Upload the `pillar-press-theme` directory to your `wp-content/themes` directory
+1. Extract `pillar-press.zip` to your computer
+1. Upload the `pillar-press` directory to your `wp-content/themes` directory
 1. Activate the theme in your WordPress Themes dashboard
 
 ## Screenshots
@@ -42,4 +42,4 @@ Image here.
 
 ## Changelog
 
-View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press-theme/blob/master/CHANGELOG.md) file
+View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press/blob/master/CHANGELOG.md) file

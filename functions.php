@@ -18,7 +18,7 @@ function ppt_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 */
-	load_theme_textdomain( 'pillar-press-theme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'pillar-press', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -40,7 +40,7 @@ function ppt_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'pillar-press-theme' ),
+		'primary' => esc_html__( 'Primary Menu', 'pillar-press' ),
 	) );
 
 	/*
@@ -94,14 +94,14 @@ add_action( 'after_setup_theme', 'ppt_content_width', 0 );
 function ppt_scripts() {
 	wp_enqueue_style( 'pillar-press-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'pillar-press-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
-	wp_enqueue_style( 'pillar-press-theme', get_template_directory_uri() . '/css/pp-theme.min.css' );
+	wp_enqueue_style( 'pillar-press', get_template_directory_uri() . '/css/pp-theme.min.css' );
 	wp_enqueue_style( 'pillar-press-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Vollkorn:400,600,900' );
 
 	wp_enqueue_script( 'pillar-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180517', true );
 	wp_enqueue_script( 'pillar-press-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180517', true );
 	wp_enqueue_script( 'pillar-press-jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '20180517', true );
 	wp_enqueue_script( 'pillar-press-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20180517', true );
-	wp_enqueue_script( 'pillar-press-theme', get_template_directory_uri() . '/js/pp-theme.min.js', array(), '20180517', true );
+	wp_enqueue_script( 'pillar-press', get_template_directory_uri() . '/js/pp-theme.min.js', array(), '20180517', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -150,7 +150,7 @@ add_filter( 'excerpt_length', 'ppt_excerpt_length', 999 );
 
 // Add a Read More link to the end of the excerpt.
 function ppt_excerpt_more_link( $more ) {
-	return ' ... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'pillar-press-theme' ) . '</a>';
+	return ' ... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'pillar-press' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'ppt_excerpt_more_link' );
 
