@@ -5,7 +5,7 @@
 
 # Current status
 
-Not ready for production.
+**05/17** Preparing to submit to the WordPress themes directory.
 
 ## Description
 
