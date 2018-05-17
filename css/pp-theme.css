@@ -425,6 +425,23 @@ body.siteorigin-panels .intro-header {
 	margin-bottom: 0;
 }
 
+/** Comment name link */
+
+b.fn a.url {
+    text-decoration: none;
+}
+
+/** Comment reply link */
+
+.comment-reply-link {
+    background: #eee;
+    font-size: 0.6em;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
 /** Gutenberg specific CSS Styles */
 
 .alignwide {
