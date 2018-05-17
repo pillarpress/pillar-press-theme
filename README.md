@@ -9,7 +9,7 @@
 
 ## Description
 
-Pillar Press Theme (PPT) is a WordPress theme with no sidebar, no excess clutter, easy to read content and a bold featured image to instantly grab your readers attention.
+The Pillar Press Theme (PPT) is a WordPress theme with no sidebar, no excess clutter, easy to read content and a bold featured image to instantly grab your readers attention.
 
 The beauty is in it's mininmalism.
 
@@ -42,4 +42,4 @@ Image here.
 
 ## Changelog
 
-View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press/blob/master/CHANGELOG.md) file
+View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press-theme/blob/master/CHANGELOG.md) file
