@@ -26,6 +26,8 @@
 
 <body <?php body_class(); ?>>
 
+  <?php if ( ! is_page_template( 'page-builder.php' ) ) { ?>
+
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
@@ -56,6 +58,8 @@
   </nav>
 
 	<?php ppt_header(); ?>
+
+<?php } // end is_page_template(). ?>
 
   <!-- Main Content -->
   <div class="container">
