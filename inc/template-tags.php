@@ -396,18 +396,18 @@ if ( ! function_exists( 'ppt_social' ) ) :
  */
 function ppt_social() {
 	$social_networks = array(
+		'instagram',
 		'twitter',
 		'facebook',
+		'snapchat',
 		'google',
 		'pinterest',
+		'youtube',
 		'linkedin',
-		'github',
-		'instagram',
 		'flickr',
 		'medium',
-		'snapchat',
 		'tumblr',
-		'youtube',
+		'github',
 	); ?>
 
 	<ul class="list-inline text-center">

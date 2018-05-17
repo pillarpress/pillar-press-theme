@@ -6,18 +6,18 @@
  */
 function ppt_register_social_links( $wp_customize ) {
 	$social_networks = array(
+		'Instagram',
 		'Twitter',
 		'Facebook',
+		'Snapchat',
 		'Google+',
 		'Pinterest',
+		'YouTube',
 		'LinkedIn',
-		'GitHub',
-		'Instagram',
 		'Flickr',
 		'Medium',
-		'Snapchat',
 		'Tumblr',
-		'YouTube',
+		'GitHub',
 	);
 
 	$wp_customize->add_section(
