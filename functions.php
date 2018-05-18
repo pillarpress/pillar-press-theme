@@ -95,6 +95,7 @@ function ppt_scripts() {
 	wp_enqueue_style( 'pillar-press-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'pillar-press-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'pillar-press-theme', get_template_directory_uri() . '/css/pp-theme.min.css' );
+	wp_enqueue_style( 'pillar-press-fontawesome', get_template_directory_uri() . '/css/fontawesome-all.min.css' );
 	wp_enqueue_style( 'pillar-press-google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Vollkorn:400,600,900' );
 
 	wp_enqueue_script( 'pillar-press-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180517', true );
