@@ -23,7 +23,7 @@ function ppt_register_social_links( $wp_customize ) {
 	$wp_customize->add_section(
 		'ppt_social_links',
 		array(
-			'title'     => 'Social Links',
+			'title'     => __( 'Social Links', 'pillar-press' ),
 			'priority'  => 30
 		)
 	);
@@ -73,7 +73,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'link_color',
 			array(
-			    'label'    => 'Link Color',
+			    'label'    => __( 'Link Color', 'pillar-press' ),
 			    'section'  => 'colors',
 			    'settings' => 'ppt_link_color'
 			)
@@ -94,7 +94,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'header_background_color',
 			array(
-			    'label'    => 'Header Background Color',
+			    'label'    => __( 'Header Background Color', 'pillar-press' ),
 			    'section'  => 'colors',
 			    'settings' => 'ppt_header_background_color'
 			)
@@ -113,7 +113,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'ppt_display_options',
 		array(
-			'title'    => 'Display Options',
+			'title'    => __( 'Display Options', 'pillar-press' ),
 			'priority' => 40
 		)
 	);
@@ -131,7 +131,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_post_excerpt',
 		array(
 			'section' => 'ppt_display_options',
-			'label'   => 'Post Excerpts',
+			'label'   => __( 'Post Excerpts', 'pillar-press' ),
 			'type'    => 'radio',
 			'choices' => array(
 				'hide' => 'Hide',
@@ -153,7 +153,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_darken_header',
 		array(
 			'section' => 'ppt_display_options',
-			'label'   => 'Darken Header?',
+			'label'   => __( 'Darken Header?', 'pillar-press' ),
 			'type'    => 'radio',
 			'choices' => array(
 				'no'  => 'No',
@@ -175,7 +175,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_parallax_header',
 		array(
 			'section' => 'ppt_display_options',
-			'label'   => 'Parallax Header?',
+			'label'   => __( 'Parallax Header?', 'pillar-press' ),
 			'type'    => 'radio',
 			'choices' => array(
 				'no'  => 'No',
@@ -197,7 +197,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_footer_copyright_text',
 		array(
 			'section' => 'ppt_display_options',
-			'label'   => 'Copyright Message',
+			'label'   => __( 'Copyright Text', 'pillar-press' ),
 			'type'    => 'text'
 		)
 	);
@@ -208,7 +208,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'ppt_homeintro_options',
 		array(
-			'title'    => 'Home Intro',
+			'title'    => __( 'Home Intro', 'pillar-press' ),
 			'priority' => 20
 		)
 	);
@@ -227,7 +227,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 			$wp_customize,
 			'ppt_homeintro_image',
 			array(
-			    'label'    => 'Background Image',
+			    'label'    => __( 'Background Image', 'pillar-press' ),
 			    'settings' => 'ppt_homeintro_image',
 			    'section'  => 'ppt_homeintro_options'
 			)
@@ -247,7 +247,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_homeintro_title',
 		array(
 			'section' => 'ppt_homeintro_options',
-			'label'   => 'Title',
+			'label'   => __( 'Title', 'pillar-press' ),
 			'type'    => 'text'
 		)
 	);
@@ -265,7 +265,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_homeintro_subtitle',
 		array(
 			'section' => 'ppt_homeintro_options',
-			'label'   => 'Subtitle',
+			'label'   => __( 'Subtitle', 'pillar-press' ),
 			'type'    => 'text'
 		)
 	);
