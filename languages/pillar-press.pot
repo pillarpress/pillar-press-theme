@@ -1,5 +1,5 @@
 # Copyright (C) 2018 Pillar Press
-# This file is distributed under the GNU General Public License v2 or later.
+# This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-06-12 21:51:31+0000\n"
 "Last-Translator: Robert DeVore <deviodigital@gmail.com>\n"
 "Language-Team: Robert DeVore <deviodigital@gmail.com>\n"
 
