@@ -189,12 +189,12 @@ function ppt_header() {
 	<?php
 		$feat_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+    <header class="intro-header" style="background-color: <?php echo esc_attr( get_theme_mod( 'ppt_header_background_color' ) ); ?>; background-image: url('<?php echo esc_url( $feat_image ); ?>');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1><?php single_post_title(); ?></h1>
+                        <h1><?php esc_html_e( single_post_title() ); ?></h1>
 												<?php if ( function_exists( 'the_subtitle' ) ) {
 													the_subtitle( '<h2 class="subheading">', '</h2>' );
 												} ?>
@@ -214,12 +214,12 @@ function ppt_header() {
 	<?php
 		$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 	?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $feat_image; ?>')">
+    <header class="intro-header" style="background-color: <?php echo esc_attr( get_theme_mod( 'ppt_header_background_color' ) ); ?>; background-image: url('<?php echo esc_url( $feat_image ); ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1><?php single_post_title(); ?></h1>
+                        <h1><?php esc_html_e( single_post_title() ); ?></h1>
                         <hr class="small">
 												<?php if ( function_exists( 'the_subtitle' ) ) {
 													the_subtitle( '<span class="subheading">', '</span>' );
@@ -238,7 +238,7 @@ function ppt_header() {
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>;')">
+    <header class="intro-header" style="background-color: <?php echo esc_attr( get_theme_mod( 'ppt_header_background_color' ) ); ?>;')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -265,13 +265,13 @@ function ppt_header() {
 		<?php } else { ?>
 		<?php $headerimg = get_template_directory_uri() . '/img/home-bg.jpg'; ?>
 		<?php } ?>
-    <header class="intro-header" style="background-color: <?php echo get_theme_mod( 'ppt_header_background_color' ); ?>; background-image: url('<?php echo $headerimg; ?>')">
+    <header class="intro-header" style="background-color: <?php echo esc_attr( get_theme_mod( 'ppt_header_background_color' ) ); ?>; background-image: url('<?php echo $headerimg; ?>')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
 												<?php if ( get_theme_mod( 'ppt_homeintro_title' ) !='' ) { ?>
-												<h1 class="homeintro"><?php echo get_theme_mod( 'ppt_homeintro_title' ); ?></h1>
+												<h1 class="homeintro"><?php echo esc_html_e( get_theme_mod( 'ppt_homeintro_title' ) ); ?></h1>
 												<?php } else { ?>
                         <h1><?php esc_html_e( 'Pillar Press', 'pillar-press' ); ?></h1>
 												<?php } ?>
