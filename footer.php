@@ -26,7 +26,7 @@
   				<?php do_action( 'ppt_footer_top' ); ?>
   					<?php ppt_social(); ?>
   				<?php if ( '' !== get_theme_mod( 'ppt_footer_copyright_text' ) ) { ?>
-  					<p class="copyright text-muted"><?php echo get_theme_mod( 'ppt_footer_copyright_text' ); ?></p>
+  					<p class="copyright text-muted"><?php echo esc_html( get_theme_mod( 'ppt_footer_copyright_text' ) ); ?></p>
   				<?php } else { ?>
             <p class="copyright text-muted"><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pillar-press' ) ); ?>" target="_blank"><?php printf( esc_html__( 'Powered by %s', 'pillar-press' ), 'WordPress' ); ?></a> &middot; <?php printf( esc_html__( '%1$s by %2$s.', 'pillar-press' ), 'Theme', '<a href="http://pillar.press" rel="designer" target="_blank">Pillar Press</a>' ); ?></p>
   				<?php } ?>
