@@ -365,26 +365,26 @@ function ppt_customizer_css() {
 	<style type="text/css">
 		-moz-selection,
 		::selection{
-			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			background: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 		body{
-			webkit-tap-highlight-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			webkit-tap-highlight-color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 		a:hover {
-			color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 		.pager li>a:hover, .pager li>a:focus {
 			color: #fff;
-			background-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
-			border: 1px solid <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			background-color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
+			border: 1px solid <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
 		button:hover,
 		input[type="button"]:hover,
 		input[type="reset"]:hover,
 		input[type="submit"]:hover {
-			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
-			border-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			background: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
+			border-color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
 		button:focus,
@@ -395,8 +395,8 @@ function ppt_customizer_css() {
 		input[type="button"]:active,
 		input[type="reset"]:active,
 		input[type="submit"]:active {
-			background: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
-			border-color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			background: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
+			border-color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
 		input[type="text"]:focus,
@@ -405,11 +405,11 @@ function ppt_customizer_css() {
 		input[type="password"]:focus,
 		input[type="search"]:focus,
 		textarea:focus {
-			border: 1px solid <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			border: 1px solid <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
 		.navbar-custom.is-fixed .nav li a:hover, .navbar-custom.is-fixed .nav li a:focus {
-			color: <?php echo get_theme_mod( 'ppt_link_color' ); ?>;
+			color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
 		<?php if ( get_theme_mod( 'ppt_darken_header' ) !== 'no' ) { ?>
