@@ -3,6 +3,7 @@
  * Custom functions that act independently of the theme templates
  *
  * @package Pillar Press
+ * @since   1.0.0
  */
 
 /**

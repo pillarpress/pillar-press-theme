@@ -5,7 +5,9 @@
 
 # Current status
 
-**05/18** Submitted to WordPress theme directory, made one round of revisions (v1.0.1) and waiting on review.
+**05/23** Submitted round two revisions (v1.0.2).
+**05/18** Submitted to WordPress theme directory, made one round of revisions (v1.0.1).
+**05/17** Preparing to submit to the WordPress themes directory.
 
 ## Description
 
