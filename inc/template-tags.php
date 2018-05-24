@@ -3,6 +3,7 @@
  * Custom template tags for this theme.
  *
  * @package Pillar Press
+ * @since   1.0.0
  */
 
 if ( ! function_exists( 'ppt_posts_navigation' ) ) :
@@ -194,7 +195,7 @@ function ppt_header() {
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1><?php esc_html_e( single_post_title() ); ?></h1>
+                        <h1><?php esc_html( single_post_title() ); ?></h1>
 												<?php if ( function_exists( 'the_subtitle' ) ) {
 													the_subtitle( '<h2 class="subheading">', '</h2>' );
 												} ?>
@@ -219,7 +220,7 @@ function ppt_header() {
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1><?php esc_html_e( single_post_title() ); ?></h1>
+                        <h1><?php esc_html( single_post_title() ); ?></h1>
                         <hr class="small">
 												<?php if ( function_exists( 'the_subtitle' ) ) {
 													the_subtitle( '<span class="subheading">', '</span>' );
@@ -271,7 +272,7 @@ function ppt_header() {
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
 												<?php if ( get_theme_mod( 'ppt_homeintro_title' ) !='' ) { ?>
-												<h1 class="homeintro"><?php echo esc_html_e( get_theme_mod( 'ppt_homeintro_title' ) ); ?></h1>
+												<h1 class="homeintro"><?php echo esc_html( get_theme_mod( 'ppt_homeintro_title' ) ); ?></h1>
 												<?php } else { ?>
                         <h1><?php esc_html_e( 'Pillar Press', 'pillar-press' ); ?></h1>
 												<?php } ?>
