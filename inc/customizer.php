@@ -43,7 +43,7 @@ function ppt_register_social_links( $wp_customize ) {
 			$link_class,
 			array(
 				'section'  => 'ppt_social_links',
-				'label'    => $network,
+				'label'    => __( $network, 'pillar-press' ),
 				'type'     => 'text'
 			)
 		);
