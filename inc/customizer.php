@@ -64,7 +64,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_link_color',
 		array(
 			'default'           => '#4E5C6B',
-			'sanitize_callback' => 'ppt_sanitize_input',
+			'sanitize_callback' => 'ppt_sanitize_text_colors',
 			'transport'         => 'refresh'
 		)
 	);
@@ -85,7 +85,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_header_background_color',
 		array(
 			'default'           => '#222',
-			'sanitize_callback' => 'ppt_sanitize_input',
+			'sanitize_callback' => 'ppt_sanitize_hex_colors',
 			'transport'         => 'refresh'
 		)
 	);
@@ -123,7 +123,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_post_excerpt',
 		array(
 			'default'           => 'hide',
-			'sanitize_callback' => 'ppt_sanitize_input',
+			'sanitize_callback' => 'ppt_sanitize_radio',
 			'transport'         => 'refresh'
 		)
 	);
@@ -145,7 +145,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_darken_header',
 		array(
 			'default'           => 'no',
-			'sanitize_callback' => 'ppt_sanitize_input',
+			'sanitize_callback' => 'ppt_sanitize_radio',
 			'transport'         => 'refresh'
 		)
 	);
@@ -167,7 +167,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_parallax_header',
 		array(
 			'default'           => 'no',
-			'sanitize_callback' => 'ppt_sanitize_input',
+			'sanitize_callback' => 'ppt_sanitize_radio',
 			'transport'         => 'refresh'
 		)
 	);
@@ -218,7 +218,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_homeintro_image',
 		array(
 		    'default'           => get_template_directory_uri() . '/img/home-bg.jpg',
-				'sanitize_callback' => 'ppt_sanitize_input',
+				'sanitize_callback' => 'ppt_sanitize_image',
 		    'transport'         => 'refresh'
 		)
 	);
@@ -271,8 +271,8 @@ function ppt_register_theme_customizer( $wp_customize ) {
 	);
 
 } // end ppt_register_theme_customizer
-
 add_action( 'customize_register', 'ppt_register_theme_customizer' );
+
 /**
  * Sanitizes the incoming input and returns it prior to serialization.
  *
@@ -280,12 +280,75 @@ add_action( 'customize_register', 'ppt_register_theme_customizer' );
  * @return     string              The sanitized string
  * @package    Pillar Press
  * @since      1.0.0
- * @version    1.0.0
  */
 function ppt_sanitize_input( $input ) {
-	return strip_tags( stripslashes( $input ) );
-} // end ppt_sanitize_input
+	return sanitize_text_field( $input );
+} // end ppt_sanitize_input.
 
+/**
+ * Sanitizes the incoming input and returns it prior to serialization.
+ *
+ * @param      string    $input    The string to sanitize
+ * @return     string              The sanitized string
+ * @package    Pillar Press
+ * @since      1.0.2
+ */
+function ppt_sanitize_radio( $input ) {
+	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only.
+	$input = sanitize_key( $input );
+
+	//get the list of possible radio box options.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	//return input if valid or return default option.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+} // end ppt_sanitize_input.
+
+/**
+ * Sanitizes the incoming hex code and returns it prior to serialization.
+ *
+ * @param      string    $input    The string to sanitize
+ * @return     string              The sanitized string
+ * @package    Pillar Press
+ * @since      1.0.2
+ */
+function ppt_sanitize_hex_colors( $input ) {
+	return sanitize_hex_color( $input );
+} // ppt_sanitize_hex_colors.
+
+/**
+ * Sanitizes the incoming image and returns it prior to serialization.
+ *
+ * @param      string    $input    The string to sanitize
+ * @return     string              The sanitized string
+ * @package    Pillar Press
+ * @since      1.0.2
+ */
+function ppt_sanitize_image( $input ) {
+	// Default output.
+	$output = '';
+
+	// Check file type.
+	$filetype  = wp_check_filetype( $input );
+	$mime_type = $filetype['type'];
+
+	// Only mime type "image" allowed.
+	if ( false !== strpos( $mime_type, 'image' ) ) {
+		$output = $input;
+	}
+
+	return $output;
+}
+
+/**
+ * Sanitizes the incoming copyright input and returns it prior to serialization.
+ *
+ * @param      string    $input    The string to sanitize
+ * @return     string              The sanitized string
+ * @package    Pillar Press
+ * @since      1.0.0
+ */
 function ppt_sanitize_copyright( $input ) {
 	$allowed = array(
 		's'      => array(),
