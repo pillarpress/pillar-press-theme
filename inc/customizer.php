@@ -19,6 +19,7 @@ function ppt_register_social_links( $wp_customize ) {
 		'Tumblr',
 		'GitHub',
 		'Gitlab',
+		'Bitbucket',
 	);
 
 	$wp_customize->add_section(

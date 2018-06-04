@@ -316,6 +316,7 @@ function ppt_social() {
 		'tumblr',
 		'github',
 		'gitlab',
+		'bitbucket',
 	); ?>
 
 	<ul class="list-inline text-center">
