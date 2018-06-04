@@ -315,6 +315,7 @@ function ppt_social() {
 		'medium',
 		'tumblr',
 		'github',
+		'gitlab',
 	); ?>
 
 	<ul class="list-inline text-center">

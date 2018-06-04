@@ -18,6 +18,7 @@ function ppt_register_social_links( $wp_customize ) {
 		'Medium',
 		'Tumblr',
 		'GitHub',
+		'Gitlab',
 	);
 
 	$wp_customize->add_section(
