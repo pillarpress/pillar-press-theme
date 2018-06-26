@@ -6,58 +6,6 @@
  * @since   1.0.0
  */
 
-if ( ! function_exists( 'ppt_posts_navigation' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
- * @todo Remove this function when WordPress 4.3 is released.
- */
-function ppt_posts_navigation() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-	?>
-	<ul class="pager">
-		<?php if ( get_next_posts_link() ) : ?>
-		<li class="next"><?php next_posts_link( esc_html__( 'Older posts', 'pillar-press' ) ); ?></li>
-		<?php endif; ?>
-		<?php if ( get_previous_posts_link() ) : ?>
-		<li class="previous"><?php previous_posts_link( esc_html__( 'Newer posts', 'pillar-press' ) ); ?></li>
-		<?php endif; ?>
-	</ul>
-	<?php
-}
-endif;
-
-if ( ! function_exists( 'the_post_navigation' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @todo Remove this function when WordPress 4.3 is released.
- */
-function the_post_navigation() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'pillar-press' ); ?></h2>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
 if ( ! function_exists( 'ppt_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.

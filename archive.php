@@ -34,7 +34,7 @@ get_header(); ?>
 
 		<?php endwhile; ?>
 
-			<?php ppt_posts_navigation(); ?>
+			<?php the_posts_pagination(); ?>
 
 		<?php else : ?>
 
