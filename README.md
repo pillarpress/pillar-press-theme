@@ -1,13 +1,15 @@
-![Pillar Press](http://pillar.press/assets/img/pillar-press-icon.png)
+# Pillar Press
 
-# Pillar Press - WordPress Theme
-[Twitter](https://twitter.com/PillarPress) - [Website](http://pillar.press)
+**Contributors:** deviodigital, pillarpress  
+**Requires at least:** WordPress 4.4  
+**Tested up to:** WordPress 4.9.6  
+**Stable tag:** 1.0.2  
+**Version:** 1.0.2  
+**License:** GPLv3 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
+**Tags:** one-column, accessibility-ready, custom-colors, custom-header, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
 
-# Current status
-
-* **05/23** Submitted round two revisions (v1.0.2).
-* **05/18** Submitted to WordPress theme directory, made one round of revisions (v1.0.1).
-* **05/17** Preparing to submit to the WordPress themes directory.
+The cornerstone of content creation with WordPress.
 
 ## Description
 
@@ -17,31 +19,40 @@ The beauty is in it's mininmalism.
 
 No exhaustive set of features to customize before being able to write. It works immediately on upload.
 
-## Live Demo &amp; Release Notes
+## Frequently Asked Questions
 
-Coming soon.
+* Is the Pillar Press Theme compatible with Gutenberg?
+ 
+Yes, there are features built directly into PPT that utilize the custom features that Gutenberg offers.
 
-## Installation
+For instance, the image block lets you add additional widths to stretch outside of the content area, and the Pillar Press Theme accomodates that feature.
 
-### Using The WordPress Dashboard
+## Copyright
 
-1. Navigate to the 'Add New' Themes Dashboard
-1. Select `pillar-press.zip` from your computer
-1. Upload
-1. Activate the theme on the WordPress Themes Dashboard
+Pillar Press WordPress Theme, Copyright 2018 Robert DeVore
+Pillar Press WordPress Theme is distributed under the terms of the GNU GPL
 
-### Using FTP
+Twenty Seventeen bundles the following third-party resources:
 
-1. Extract `pillar-press.zip` to your computer
-1. Upload the `pillar-press` directory to your `wp-content/themes` directory
-1. Activate the theme in your WordPress Themes dashboard
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
+**License:** MIT
+Source: https://necolas.github.io/normalize.css/
 
-## Screenshots
+Font Awesome icons, Copyright Dave Gandy
+**License:** SIL Open Font License, version 1.1.
+Source: https://fontawesome.com/
 
-### Coming soon.
+Bootstrap, Copyright Mark Otto
+**License:** MIT
+Source: https://getbootstrap.com/
 
-Image here.
+Bundled header image, Copyright Chris Brignola
+**License:** CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/X2CxUXFqKcM
 
 ## Changelog
 
-View [CHANGELOG.MD](https://github.com/pillarpress/pillar-press-theme/blob/master/CHANGELOG.md) file
+### 1.0
+* Released: December 6, 2016
+
+Initial release
