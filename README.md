@@ -52,7 +52,4 @@ Source: https://unsplash.com/photos/X2CxUXFqKcM
 
 ## Changelog
 
-### 1.0
-* Released: December 6, 2016
-
-Initial release
+[View CHANGELOG.md](https://github.com/pillarpress/pillar-press-theme/CHANGELOG.md)

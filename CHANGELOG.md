@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.0.3
+
+* Added Bitbucket and Gitlab social icons in `inc/customizer.php` and `inc/template-tags.php`
+* Updated escaping outputs in `inc/customizer.php`
+* Updated escaping outputs in `inc/template-tags.php`
+* Updated CSS styles for pagination in `css/pp-theme.css` and `css/pp-theme.min.css`
+* Updated pagination to use core WP function in `inc/template-tags.php`, `archive.php`, `index.php`, `search.php`
+
 ### 1.0.2
 * Added sanitization for Customizer settings
 * Added proper escaping for various items in `inc/template-tags.php`
