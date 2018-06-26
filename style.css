@@ -626,22 +626,6 @@ a:active {
 	width: 200px;
 }
 
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
@@ -650,11 +634,6 @@ a:active {
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
 }
 
 .navbar-custom .nav ul { /* this targets all sub menus */
@@ -924,10 +903,6 @@ p.excerpt {
     width: 100%;
 }
 
-.postfooter span {
-
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -968,7 +943,7 @@ footer.comment-meta {
 }
 
 .comment-metadata {
-	font-color: gray;
+	color: gray;
 	font-size: 0.8em;
 	font-style: italic;
 }
@@ -1122,9 +1097,7 @@ object {
 /*--------------------------------------------------------------
 ## Post Navigation Links
 --------------------------------------------------------------*/
-.navigation.post-navigation {
 
-}
 .nav-links {
 	background: #F8F8F8;
     float: left;
