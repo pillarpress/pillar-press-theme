@@ -272,8 +272,8 @@ function ppt_social() {
 			if ( get_theme_mod( 'ppt_social_'.$network ) !='' ) { ?>
 				<li id="social-<?php echo $network; ?>">
 					<div class="fa-2x">
-						<a href="<?php echo get_theme_mod( 'ppt_social_'.$network ); ?>" target="_blank">
-  						<i class="fab fa-<?php echo $network; ?>"></i>
+						<a href="<?php esc_html_e( get_theme_mod( 'ppt_social_'.$network ) ); ?>" target="_blank">
+  						<i class="fab fa-<?php esc_html_e( $network ); ?>"></i>
 						</a>
 					</div>
 				</li>
