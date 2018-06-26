@@ -281,6 +281,25 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+nav.navigation.pagination {
+  width: 100%;
+}
+.navigation.pagination .nav-links {
+  background: transparent;
+  color: #AAA;
+  font-size: 16px;
+  text-align: center;
+}
+.page-numbers {
+  padding: 3px;
+}
+span.page-numbers.current {
+  color: #404040;
+  font-weight: 600;
+}
+a.page-numbers {
+  color: gray;
+}
 footer {
   padding: 50px 0;
 }
