@@ -3,8 +3,8 @@
 **Contributors:** deviodigital, pillarpress  
 **Requires at least:** WordPress 4.4  
 **Tested up to:** WordPress 4.9.6  
-**Stable tag:** 1.0.2  
-**Version:** 1.0.2  
+**Stable tag:** 1.0.3  
+**Version:** 1.0.3  
 **License:** GPLv3 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** one-column, accessibility-ready, custom-colors, custom-header, custom-menu, featured-images, post-formats, threaded-comments, translation-ready
