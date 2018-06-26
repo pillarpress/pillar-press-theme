@@ -52,4 +52,4 @@ Source: https://unsplash.com/photos/X2CxUXFqKcM
 
 ## Changelog
 
-[View CHANGELOG.md](https://github.com/pillarpress/pillar-press-theme/CHANGELOG.md)
+[View CHANGELOG.md](https://github.com/pillarpress/pillar-press-theme/blob/master/CHANGELOG.md)
