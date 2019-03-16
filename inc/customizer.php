@@ -17,6 +17,7 @@ function ppt_register_social_links( $wp_customize ) {
 		'Flickr',
 		'Medium',
 		'Tumblr',
+		'WordPress',
 		'GitHub',
 		'Gitlab',
 		'Bitbucket',
