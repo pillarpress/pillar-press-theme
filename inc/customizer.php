@@ -478,7 +478,7 @@ function ppt_customizer_css() {
 			color: <?php echo esc_attr( get_theme_mod( 'ppt_link_color' ) ); ?>;
 		}
 
-		<?php if ( get_theme_mod( 'ppt_darken_header' ) !== 'no' ) { ?>
+		<?php if ( 'no' !== get_theme_mod( 'ppt_darken_header' ) ) { ?>
 		body.admin-bar .navbar-custom.is-fixed { top:-32px; }
 
 		header.intro-header { position: relative; }
@@ -505,7 +505,7 @@ function ppt_customizer_css() {
 		z-index: 9999;
 		}
 		<?php } ?>
-		<?php if ( get_theme_mod( 'ppt_parallax_header' ) !== 'no' ) { ?>
+		<?php if ( 'no' !== get_theme_mod( 'ppt_parallax_header' ) ) { ?>
 		.intro-header {
 			background-attachment: fixed;
 		}
