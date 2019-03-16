@@ -67,7 +67,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_link_color',
 		array(
 			'default'           => '#4E5C6B',
-			'sanitize_callback' => 'ppt_sanitize_text_colors',
+			'sanitize_callback' => 'ppt_sanitize_hex_colors',
 			'transport'         => 'refresh'
 		)
 	);
@@ -126,7 +126,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_post_excerpt',
 		array(
 			'default'           => 'hide',
-			'sanitize_callback' => 'ppt_sanitize_radio',
+			'sanitize_callback' => 'ppt_sanitize_input',
 			'transport'         => 'refresh'
 		)
 	);
@@ -148,7 +148,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_darken_header',
 		array(
 			'default'           => 'no',
-			'sanitize_callback' => 'ppt_sanitize_radio',
+			'sanitize_callback' => 'ppt_sanitize_input',
 			'transport'         => 'refresh'
 		)
 	);
@@ -170,7 +170,7 @@ function ppt_register_theme_customizer( $wp_customize ) {
 		'ppt_parallax_header',
 		array(
 			'default'           => 'no',
-			'sanitize_callback' => 'ppt_sanitize_radio',
+			'sanitize_callback' => 'ppt_sanitize_input',
 			'transport'         => 'refresh'
 		)
 	);
