@@ -262,6 +262,7 @@ function ppt_social() {
 		'flickr',
 		'medium',
 		'tumblr',
+		'wordpress',
 		'github',
 		'gitlab',
 		'bitbucket',
