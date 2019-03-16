@@ -484,25 +484,25 @@ function ppt_customizer_css() {
 		header.intro-header { position: relative; }
 
 		header.intro-header .row {
-		z-index: 3;
-		position: relative;
+			position: relative;
+			z-index: 3;
 		}
 
 		header.intro-header .container:after {
-		background: rgba(0,0,0,0.2);
-		z-index: 2;
-		content: '';
-		width: 100%;
-		height: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
+			background: rgba(0,0,0,0.2);
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 2;
 		}
 
 		@media only screen and (min-width: 1170px)
 		.navbar-custom {
-		z-index: 9999;
+			z-index: 9999;
 		}
 		<?php } ?>
 		<?php if ( 'no' !== get_theme_mod( 'ppt_parallax_header' ) ) { ?>
